@@ -17,8 +17,8 @@ I use this repository to **think like a professional engineer**, not just to “
 ---
 
 <p align="center">
-  <a href="https://github.com/USERNAME/learning" target="_blank">
-    <img src="https://img.shields.io/github/stars/USERNAME/learning?style=for-the-badge&logo=github" />
+  <a href="https://github.com/MohammadTahaBatoomi/Learning" target="_blank">
+    <img src="https://img.shields.io/github/stars/MohammadTahaBatoomi/Learning?style=for-the-badge&logo=github" />
   </a>
 </p>
 
