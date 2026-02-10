@@ -16,6 +16,17 @@ I use this repository to **think like a professional engineer**, not just to “
 
 ---
 
+<p align="center">
+  <a href="https://github.com/USERNAME/learning" target="_blank">
+    <img src="https://img.shields.io/github/stars/USERNAME/learning?style=for-the-badge&logo=github" />
+  </a>
+</p>
+
+<p align="center">
+  ⭐ If you find this repository useful, consider giving it a star!
+</p>
+
+
 ## 🎯 Purpose & Vision
 
 The core goals of this repository are:
