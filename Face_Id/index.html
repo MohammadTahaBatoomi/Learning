@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Face Login | Admin Access</title>
+  <!-- Face API (client-side face detection/recognition) -->
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-pattern"></div>
+  <main class="layout">
+    <section class="brand">
+      <div class="logo-circle">FA</div>
+      <h1>Face Access</h1>
+      <p>Secure, passwordless sign-in for your console.</p>
+      <ul>
+        <li>Real-time face verification</li>
+        <li>Embeddings stored locally only</li>
+        <li>Manual fallback when camera is unavailable</li>
+      </ul>
+    </section>
+
+    <section class="card" id="card">
+      <div class="card-header">
+        <div class="tabs">
+          <button class="tab active" data-target="login-panel">Login</button>
+          <button class="tab" data-target="register-panel">Register</button>
+        </div>
+        <p class="hint">Look at the camera to login.</p>
+      </div>
+
+      <div class="panel" id="login-panel">
+        <div class="video-shell">
+          <video id="video" autoplay muted playsinline></video>
+          <canvas id="overlay"></canvas>
+          <div class="loader" id="loader">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <p>Scanning face…</p>
+          </div>
+          <div class="status" id="status">Initializing camera…</div>
+        </div>
+
+        <div class="result" id="result">Waiting for face…</div>
+
+        <div class="manual">
+          <div class="manual-header">
+            <span class="divider"></span>
+            <span>Manual login (fallback)</span>
+            <span class="divider"></span>
+          </div>
+          <form id="manual-form">
+            <label>
+              Email
+              <input type="email" name="email" placeholder="admin@example.com" required />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" placeholder="••••••••" required />
+            </label>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="panel hidden" id="register-panel">
+        <form id="register-form">
+          <label>
+            Display name
+            <input type="text" name="name" placeholder="Jane Admin" required />
+          </label>
+          <p class="note">We will capture your face embedding from the live camera feed and store it locally in your browser (no images saved).</p>
+          <button type="submit">Capture &amp; Save</button>
+        </form>
+        <div class="small">Tip: face the camera with neutral lighting; remove hats/glasses for best results.</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
